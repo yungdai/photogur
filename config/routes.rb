@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  # this makes sure that the root of the website always goes to pictures/index.hmtl.erb
+  root 'pictures#index'
+  get 'pictures' => 'pictures#index'
+
   # This adds a /pictures route (http://website/pictures) and tells it to go to the index.html.erb file
   get 'pictures' => 'pictures#index'
 
