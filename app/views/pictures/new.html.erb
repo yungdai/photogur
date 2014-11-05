@@ -1,6 +1,10 @@
 <!-- this HTML.erb file is the html for the 'new' method from the pictures_controller.rb -->
 
 <h1>Add a picture</h1>
+<!-- adding a link to go index.html.erb file -->
+<%= link_to "Back to Pictures", pictures_url %>
+
+
 <%= form_for @picture do |f| %>
     <p>
       <%= f.label "artist" %><br>

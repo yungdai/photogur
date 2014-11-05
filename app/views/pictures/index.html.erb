@@ -1,8 +1,14 @@
 <!-- this is the main index.html page for the index method inside the pictures_controller.rb file -->
 <h1>Picture Directory</h1>
+<!-- this is a link to the /pictures/new.html.erb file -->
 
+<%= link_to "New Picture", "/pictures/new" %>
 <!-- this snippet of HTML runs a ruby do loop to display each picture (@pictures.each) -->
+
+<!-- Notice we are using a helper, link_to, to make a link. The first parameter is the text and the second parameter
+is the URL clicking the text takes you to. In this case clicking on "Back to Pictures" takes you to the path
+pictures_url, which is /pictures. -->
 <% @pictures.each do |picture| %>
     <p><%= picture.title %>, <%= picture.artist %></p>
-    <img src="<%= picture.url %>">
+    <%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
 <% end %>
