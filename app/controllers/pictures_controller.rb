@@ -38,6 +38,22 @@ class PicturesController < ApplicationController
     end
   end
 
+  # for this action the 'pictures/:id/edit' path it look at the :id in the path and invoke the
+  # /app/views/pictures/edit.html.erb file
+  def edit
+    @picture = Picture.find(params[:id])
+  end
+
+  def update
+    @picture = Picture.find(params[:id])
+
+    if @picture.update_attributes(picture_params)
+      redirect_to "/pictures/#{@picture.id}"
+    else
+      render :edit
+    end
+  end
+
   private
   def picture_params
     params.require(:picture).permit(:artist, :title, :url)

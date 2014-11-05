@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   # should go and run the show.html.erb file from the /app/views/pictures directory
   get 'pictures/:id' => 'pictures#show', as: 'picture'
 
+  # This allows for the editing of pictures
+  get 'pictures/:id/edit' => "pictures#edit", as: "edit_picture" #invokes edit.html.erb
+  patch 'pictures/:id' => "pictures#update" #invokes update.html.erb
+
   # Ignore the comments below for now
   # They are just documentation
   # The priority is based upon order of creation: first created -> highest priority.
