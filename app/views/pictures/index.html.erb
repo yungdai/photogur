@@ -1,0 +1,8 @@
+<!-- this is the main index.html page for the index method inside the pictures_controller.rb file -->
+<h1>Picture Directory</h1>
+
+<!-- this snippet of HTML runs a ruby do loop to display each picture (@pictures.each) -->
+<% @pictures.each do |picture| %>
+    <p><%= picture[:title] %>, <%= picture[:artist] %></p>
+    <img src="<%= picture[:url] %>">
+<% end %>
