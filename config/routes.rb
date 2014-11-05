@@ -2,6 +2,13 @@ Rails.application.routes.draw do
   # This adds a /pictures route (http://website/pictures) and tells it to go to the index.html.erb file
   get 'pictures' => 'pictures#index'
 
+  # these two routes are to invoke the create.html.erb and new.html.erb files when you post a create or get a new photo
+  # When we click on the Submit button for this form it will go to POST /pictures. When we click on Submit we want
+  # the new page to have the Title, Artist, and URL we put in the form.  This will invoke the create method in
+  # the pictures_controller.rb file
+  post 'pictures' => 'pictures#create'
+  get 'pictures/new' => 'pictures#new' # this is also a new line of code
+
   # This allows you to see each picture individually based on it's ID.  Example: http://website/pictures/<id#>.  This
   # should go and run the show.html.erb file from the /app/views/pictures directory
   get 'pictures/:id' => 'pictures#show', as: 'picture'

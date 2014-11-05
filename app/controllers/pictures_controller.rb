@@ -48,4 +48,15 @@ class PicturesController < ApplicationController
     # when the line has been parsed:.  @pictures = @pictures[:id = 1]
     @picture = @pictures[params[:id].to_i]
   end
+
+  # new 'new' and 'create' methods that are invoked from the routes.rb file.  They will invoke new.html.erb or
+  # create.html.rb from the /app/views/pictures/ folder respectively.
+  def new
+
+  end
+
+  def create
+    # When we click on Submit we want the new page to have the Title, Artist, and URL we put in the form
+    render :text => "Saving a picture. URL: #{params[:url]}, Title: #{params[:title]}, Artist: #{params[:artist]}"
+  end
 end
