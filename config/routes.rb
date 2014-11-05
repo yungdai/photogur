@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   # This adds a /pictures route (http://website/pictures) and tells it to go to the index.html.erb file
   get 'pictures' => 'pictures#index'
 
+  # This allows you to see each picture individually based on it's ID.  Example: http://website/pictures/<id#>.  This
+  # should go and run the show.html.erb file from the /app/views/pictures directory
+  get 'pictures/:id' => 'pictures#show', as: 'picture'
+
   # Ignore the comments below for now
   # They are just documentation
   # The priority is based upon order of creation: first created -> highest priority.
