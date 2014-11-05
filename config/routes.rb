@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   # this makes sure that the root of the website always goes to pictures/index.hmtl.erb
   root 'pictures#index'
-  get 'pictures' => 'pictures#index'
 
   # This adds a /pictures route (http://website/pictures) and tells it to go to the index.html.erb file
   get 'pictures' => 'pictures#index'
@@ -21,6 +20,10 @@ Rails.application.routes.draw do
   # This allows for the editing of pictures
   get 'pictures/:id/edit' => "pictures#edit", as: "edit_picture" #invokes edit.html.erb
   patch 'pictures/:id' => "pictures#update" #invokes update.html.erb
+
+
+  delete 'pictures/:id' => 'pictures#destroy', as: "delete_picture"
+
 
   # Ignore the comments below for now
   # They are just documentation

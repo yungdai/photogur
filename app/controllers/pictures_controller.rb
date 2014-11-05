@@ -54,6 +54,13 @@ class PicturesController < ApplicationController
     end
   end
 
+  # this method is used to destroy a part of the database to delete the picture that was there using the DESTROY SQL
+  # command
+  def destroy
+    @picture = Picture.find(params[:id])
+    @picture.destroy
+    redirect_to pictures_url
+  end
   private
   def picture_params
     params.require(:picture).permit(:artist, :title, :url)
