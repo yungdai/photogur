@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # This adds a /pictures route (http://website/pictures) and tells it to go to the index.html.erb file
+  get 'pictures' => 'pictures#index'
+
+  # Ignore the comments below for now
+  # They are just documentation
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
