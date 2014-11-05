@@ -1,29 +1,45 @@
 Rails.application.routes.draw do
 
+
   # this makes sure that the root of the website always goes to pictures/index.hmtl.erb
   root 'pictures#index'
 
-  # This adds a /pictures route (http://website/pictures) and tells it to go to the index.html.erb file
-  get 'pictures' => 'pictures#index'
+  # all of the commented out code below resources :pictures line is the old code that is all being incorporated
+  # into 'resources :pictures'
+  resources :pictures
+  #
+  # # This adds a /pictures route (http://website/pictures) and tells it to go to the index.html.erb file
+  # get 'pictures' => 'pictures#index'
+  #
+  # # these two routes are to invoke the create.html.erb and new.html.erb files when you post a create or get a new photo
+  # # When we click on the Submit button for this form it will go to POST /pictures. When we click on Submit we want
+  # # the new page to have the Title, Artist, and URL we put in the form.  This will invoke the create method in
+  # # the pictures_controller.rb file
+  # post 'pictures' => 'pictures#create'
+  # get 'pictures/new' => 'pictures#new'
+  #
+  # # This allows you to see each picture individually based on it's ID.  Example: http://website/pictures/<id#>.  This
+  # # should go and run the show.html.erb file from the /app/views/pictures directory
+  # get 'pictures/:id' => 'pictures#show', as: 'picture'
+  #
+  # # This allows for the editing of pictures
+  # get 'pictures/:id/edit' => "pictures#edit", as: "edit_picture" #invokes edit.html.erb
+  # patch 'pictures/:id' => "pictures#update" #invokes update.html.erb
+  #
+  #
+  # delete 'pictures/:id' => 'pictures#destroy', as: "delete_picture"
 
-  # these two routes are to invoke the create.html.erb and new.html.erb files when you post a create or get a new photo
-  # When we click on the Submit button for this form it will go to POST /pictures. When we click on Submit we want
-  # the new page to have the Title, Artist, and URL we put in the form.  This will invoke the create method in
-  # the pictures_controller.rb file
-  post 'pictures' => 'pictures#create'
-  get 'pictures/new' => 'pictures#new' # this is also a new line of code
-
-  # This allows you to see each picture individually based on it's ID.  Example: http://website/pictures/<id#>.  This
-  # should go and run the show.html.erb file from the /app/views/pictures directory
-  get 'pictures/:id' => 'pictures#show', as: 'picture'
-
-  # This allows for the editing of pictures
-  get 'pictures/:id/edit' => "pictures#edit", as: "edit_picture" #invokes edit.html.erb
-  patch 'pictures/:id' => "pictures#update" #invokes update.html.erb
 
 
-  delete 'pictures/:id' => 'pictures#destroy', as: "delete_picture"
-
+  # the CRUD Pattern for the code above should be roughly
+  # root 'pictures#index'
+  #
+  # post 'pictures' => "pictures#create"
+  #
+  # get 'pictures' => 'pictures#index'
+  # get 'pictures/new' => 'pictures#new'
+  # get 'pictures/:id/edit' => 'pictures#edit', as: 'edit_picture'
+  # get 'pictures/:id' => 'pictures#show', as: 'picture'
 
   # Ignore the comments below for now
   # They are just documentation

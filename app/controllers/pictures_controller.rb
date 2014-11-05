@@ -12,11 +12,11 @@ class PicturesController < ApplicationController
   def show
     # this instruction will find the picture based on the params :id (http://website/pictures/;id <--
     # (the /pictures/:id/ is the params[:id])
-    @pictures = Picture.find(params[:id])
+    @picture = Picture.find(params[:id])
     # this next line allows you to take the pull the picture :id from the address bar
     # example: http://website/pictures/:id and makes sure that the :id is an integer so really it's the following
     # when the line has been parsed:.  @pictures = @pictures[:id = 1]
-    @picture = @pictures[params[:id].to_i]
+    # @picture = @pictures[params[:id].to_i]
   end
 
   # new 'new' and 'create' methods that are invoked from the routes.rb file.  They will invoke new.html.erb or
@@ -46,7 +46,6 @@ class PicturesController < ApplicationController
 
   def update
     @picture = Picture.find(params[:id])
-
     if @picture.update_attributes(picture_params)
       redirect_to "/pictures/#{@picture.id}"
     else
