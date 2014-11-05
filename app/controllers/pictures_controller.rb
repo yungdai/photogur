@@ -22,11 +22,25 @@ class PicturesController < ApplicationController
   # new 'new' and 'create' methods that are invoked from the routes.rb file.  They will invoke new.html.erb or
   # create.html.rb from the /app/views/pictures/ folder respectively.
   def new
-
+    # calls a Pictures.new method from the Object Pictures class
+    @picture = Picture.new
   end
 
   def create
-    # When we click on Submit we want the new page to have the Title, Artist, and URL we put in the form
-    render :text => "Saving a picture. URL: #{params[:url]}, Title: #{params[:title]}, Artist: #{params[:artist]}"
+    # make a new picture with what picture_params returns (which is a method we're calling)
+    @picture = Picture.new(picture_params)
+    if @picture.save
+      # if the save for the picture was successful, go to index.html.erb
+      redirect_to pictures_url
+    else
+      # otherwise render the view associated with the action :new (i.e. new.html.erb)
+      render :new
+    end
   end
+
+  private
+  def picture_params
+    params.require(:picture).permit(:artist, :title, :url)
+  end
+  
 end
