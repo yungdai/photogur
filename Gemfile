@@ -14,6 +14,13 @@ group :production do
   gem 'pg'
 end
 
+# Mercury Editor for editing HTML 5
+gem 'mercury-rails' , git: 'https://github.com/jejacks0n/mercury.git'
+
+# Use Boostrap-sass with
+gem 'bootstrap-sass', '~> 3.3.0'
+# Autoprefixer with Bootstrap to add browser vendor prefixes
+gem 'autoprefixer-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
