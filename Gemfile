@@ -15,7 +15,7 @@ group :production do
 end
 
 # Mercury Editor for editing HTML 5
-gem 'mercury-rails' , git: 'https://github.com/jejacks0n/mercury.git'
+# gem 'mercury-rails' , git: 'https://github.com/jejacks0n/mercury.git'
 
 # Use Boostrap-sass with
 gem 'bootstrap-sass', '~> 3.3.0'

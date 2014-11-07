@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   # all of the commented out code below resources :pictures line is the old code that is all being incorporated
   # into 'resources :pictures'
+
   resources :pictures
   #
   # # This adds a /pictures route (http://website/pictures) and tells it to go to the index.html.erb file
