@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="882114563">
+  <component name="DataSourceManagerImpl" format="xml" hash="845585403">
     <data-source source="LOCAL" name="Rails photogur: development" uuid="b4238a64-6321-43ea-8cc1-f36b54e47b20">
       <driver-ref>sqlite.xerial</driver-ref>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:db/development.db</jdbc-url>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails photogur: production" uuid="5fb10a81-0944-41d8-b54c-c51e3dc78318">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1/photogur</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails photogur: default" uuid="7cf78e77-a6e7-4ce3-9487-057920603ee2">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/photogur</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails photogur: test" uuid="8463fd2d-f41f-4b18-999d-1ade729dbfcc">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:db/test.sqlite3</jdbc-url>
       <libraries />
     </data-source>
   </component>

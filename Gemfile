@@ -4,16 +4,7 @@ ruby '2.1.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 
-
-# for group :development I will be using sqlite3
-group :development do
-  gem 'sqlite3'
-end
-
-# for group :production I will be using postgresQL
-group :production do
-  gem 'pg'
-end
+gem 'pg'
 
 # Mercury Editor for editing HTML 5
 # gem 'mercury-rails' , git: 'https://github.com/jejacks0n/mercury.git'

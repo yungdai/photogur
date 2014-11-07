@@ -5,7 +5,8 @@ class PicturesController < ApplicationController
   def index
     # this instruction tells the the index will now get the pictures from the picture.rb program that has a Object
     # Picture class inside it.
-    @pictures = Picture.all
+    @most_recent_pictures = Picture.most_recent_five
+
   end
 
   # this show method stores the instructions of how the show.html.erb file will be displayed to the browser.

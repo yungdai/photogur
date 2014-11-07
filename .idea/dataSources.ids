@@ -6,4 +6,10 @@
   <data-source source="LOCAL" name="Rails photogur: production" uuid="5fb10a81-0944-41d8-b54c-c51e3dc78318">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
+  <data-source source="LOCAL" name="Rails photogur: default" uuid="7cf78e77-a6e7-4ce3-9487-057920603ee2">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails photogur: test" uuid="8463fd2d-f41f-4b18-999d-1ade729dbfcc">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>
