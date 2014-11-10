@@ -4,7 +4,7 @@
     <data-source source="LOCAL" name="Rails photogur: development" uuid="b4238a64-6321-43ea-8cc1-f36b54e47b20">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:db/development.db</jdbc-url>
+      <jdbc-url>jdbc:postgresql:db/development</jdbc-url>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails photogur: production" uuid="5fb10a81-0944-41d8-b54c-c51e3dc78318">
