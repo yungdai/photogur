@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails photogur: development" uuid="b4238a64-6321-43ea-8cc1-f36b54e47b20">
+      <secret-storage>memory</secret-storage>
+    </data-source>
+    <data-source name="Rails photogur: production" uuid="5fb10a81-0944-41d8-b54c-c51e3dc78318">
+      <secret-storage>memory</secret-storage>
+    </data-source>
+  </component>
+</project>
